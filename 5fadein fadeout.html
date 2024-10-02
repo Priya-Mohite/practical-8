@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <!-- Correct jQuery CDN link -->
+</head>
+<body>
+    <p>Hello!</p>
+    <button>click</button>
+
+    <div class="test">
+        <div id="div1" style="width:80px; height:80px; display:none; background-color: red;"></div><br>
+        <div id="div2" style="width:80px; height:80px; display:none; background-color: green;"></div><br>
+        <div id="div3" style="width:80px; height:80px; display:none; background-color: blue;"></div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // On button click, fade out the three divs at different speeds
+            $("button").click(function(){
+                $("#div1").fadeOut(); // Default speed
+                $("#div2").fadeOut("slow"); // Slow speed
+                $("#div3").fadeOut(2000); // Custom speed (2 seconds)
+                console.log('clicked');
+            });
+
+            // On button double-click, fade the divs back in at different speeds
+            $("button").dblclick(function(){
+                $("#div1").fadeIn(); // Default speed
+                $("#div2").fadeIn("slow"); // Slow speed
+                $("#div3").fadeIn(2000); // Custom speed (2 seconds)
+                console.log('double clicked');
+            });
+        });
+    </script>
+</body>
+</html>
