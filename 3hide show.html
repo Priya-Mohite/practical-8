@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <!-- Correct jQuery CDN link -->
+</head>
+<body>
+    <p>If you click on me, I will disappear.</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <script>
+        $(document).ready(function(){
+            // Hide the paragraph when the "Hide" button is clicked
+            $("#hide").click(function(){
+                $("p").hide();
+                console.log('I am Hidden');
+            });
+
+            // Show the paragraph when the "Show" button is clicked
+            $("#show").click(function(){
+                $("p").show();
+                console.log('Hello! I am back');
+            });
+        });
+    </script>
+</body>
+</html>
